@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
 import IndexPage from './routes/IndexPage';
-import OrderPage from './routes/OrderPage'
+import OrderPage from './routes/OrderPage';
 import HelpPage from './routes/HelpPage'
 import MyPage from './routes/MyPage'
 import App from './routes/App'
