@@ -2,56 +2,57 @@ import React from 'react'
 import { connect } from 'dva';
 import styles from './IndexPage.css'
 import axios from '../utils/axios'
+import { Tabs, WhiteSpace, Badge, NavBar, Icon} from 'antd-mobile';
 
 class OrderPage extends React.Component {
 
-  constructor(props){
-    super(props)
-    this.state = {
-      categories:[]
-    }
+  toIndex(){
+    this.props.history.push("/index");
   }
-
-  // 当前组件绑定到根组件上执行【生命周期钩子】
-  componentDidMount(){
-    this.loadCategory();
-  }
-
-  loadCategory(){
-    axios.get('/order/findAllOrder')
-    .then((result)=>{
-      // 将数据设置到局部状态中
-      this.setState({
-        categories:result.data
-      })
-    });
-  }
-
-  toProduct(){
-    this.props.history.push("/product");
-  }  
 
   render(){
+
+    const tabs = [
+      { title: <Badge text={'20'}>全部订单</Badge> },
+      { title: <Badge text={'3'}>待付款</Badge> },
+      { title: <Badge>待服务</Badge> },
+      { title: <Badge dot>待评价</Badge> },
+    ];
+    
+    const TabExample = () => (
+      <div>
+        <Tabs tabs={tabs}
+          initialPage={1}
+          onChange={(tab, index) => { console.log('onChange', index, tab); }}
+          onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
+        >
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '550px',
+            backgroundColor: '' }}>您还没有订单
+          </div>
+        </Tabs>
+        <WhiteSpace />
+    <WhiteSpace />
+    </div>
+  )
     return (
       <div>
-        <ul className={styles["category_list"]}>
-            {
-              this.state.categories.map((item)=>{
-                return (
-                  <li 
-                    onClick={this.toProduct.bind(this)} 
-                    key={item.id} 
-                    className={styles["category_list_item"]}>
-                    <div></div>
-                    <div>{item.name}</div>
-                  </li>
-                )
-              })
-            }
-          </ul>
+          <div>
+            <NavBar
+              mode="dark"
+              rightContent={[
+                <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
+                <Icon key="1" type="ellipsis" />,
+              ]}
+            >查看订单</NavBar>
+          </div>
+        <TabExample />
       </div>
     )
   }
 }
 
-export default connect()(OrderPage);
+export default OrderPage;

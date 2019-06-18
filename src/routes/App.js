@@ -77,13 +77,13 @@ class App extends React.Component {
                 icon={<div style={{
                   width: '22px',
                   height: '22px',
-                  background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
+                  background: 'url(src/assets/svg/首页.svg) center center /  21px 21px no-repeat' }}
                 />
                 }
                 selectedIcon={<div style={{
                   width: '22px',
                   height: '22px',
-                  background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
+                  background: 'url(src/assets/svg/首页.svg) center center /  21px 21px no-repeat' }}
                 />
                 }
                 selected={this.state.selectedTab === 'index'}
@@ -97,14 +97,14 @@ class App extends React.Component {
                   <div style={{
                     width: '22px',
                     height: '22px',
-                    background: 'url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat' }}
+                    background: 'url(src/assets/svg/订单.svg) center center /  21px 21px no-repeat' }}
                   />
                 }
                 selectedIcon={
                   <div style={{
                     width: '22px',
                     height: '22px',
-                    background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat' }}
+                    background: 'url(src/assets/svg/订单.svg) center center /  21px 21px no-repeat' }}
                   />
                 }
                 title="订单"
@@ -120,14 +120,14 @@ class App extends React.Component {
                   <div style={{
                     width: '22px',
                     height: '22px',
-                    background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat' }}
+                    background: 'url(src/assets/svg/客服.svg) center center /  21px 21px no-repeat' }}
                   />
                 }
                 selectedIcon={
                   <div style={{
                     width: '22px',
                     height: '22px',
-                    background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat' }}
+                    background: 'url(src/assets/svg/客服.svg) center center /  21px 21px no-repeat' }}
                   />
                 }
                 title="帮助"
@@ -138,8 +138,18 @@ class App extends React.Component {
               >
               </TabBar.Item>
               <TabBar.Item
-                icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
-                selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
+                icon={<div style={{
+                  width: '22px',
+                  height: '22px',
+                  background: 'url(src/assets/svg/我的.svg) center center /  21px 21px no-repeat' }}
+                />
+              }
+                selectedIcon={<div style={{
+                  width: '22px',
+                  height: '22px',
+                  background: 'url(src/assets/svg/我的.svg) center center /  21px 21px no-repeat' }}
+                />
+              }
                 title="我的"
                 key="my"
                 selected={this.state.selectedTab === 'my'}

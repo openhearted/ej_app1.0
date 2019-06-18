@@ -5,6 +5,18 @@ import styles from './IndexPage.css'
 import axios from '../utils/axios'
 
 class IndexPage extends React.Component {
+    state = {
+      data: ['1', '2', '3'],
+      imgHeight: 176,
+    }
+    componentDidMount() {
+      // simulate img loading
+      setTimeout(() => {
+        this.setState({
+          data: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
+        });
+      }, 100);
+    }
   
   constructor(props){
     super(props)
@@ -56,10 +68,6 @@ class IndexPage extends React.Component {
               })
             }
           </ul>
-        </div>
-        {/* 产品 */}
-        <div>
-  
         </div>
       </div>
     );
