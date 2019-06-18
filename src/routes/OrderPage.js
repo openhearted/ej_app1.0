@@ -27,11 +27,11 @@ class OrderPage extends React.Component {
           onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
         >
           <div style={{
+            background: 'url(src/assets/svg/说明.svg) center 200px /  40px 40px no-repeat' ,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            height: '550px',
-            backgroundColor: '' }}>您还没有订单
+            height: '550px' }}>您还没有订单
           </div>
         </Tabs>
         <WhiteSpace />
