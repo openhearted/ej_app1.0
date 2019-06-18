@@ -19,35 +19,19 @@
   padding: 1em 0;
 }
 
-
-
-
-
-/*.normal {
-  font-family: Georgia, sans-serif;
-  margin-top: 3em;
-  text-align: center;
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: normal;
-  letter-spacing: -1px;
+.content {
+  flex: 1;
 }
 
-.welcome {
-  height: 328px;
-  background: url(../assets/yay.jpg) no-repeat center 0;
-  background-size: 388px 328px;
+.product {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.list {
-  font-size: 1.2em;
-  margin-top: 1.8em;
-  list-style: none;
-  line-height: 1.5em;
-}
-
-.list code {
-  background: #f7f7f7;
-}*/

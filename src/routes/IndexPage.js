@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'dva';
-import t from '../assets/yay.jpg'
+import t from '../assets/首页.png'
 import styles from './IndexPage.css'
 import axios from '../utils/axios'
 
 class IndexPage extends React.Component {
+  
   constructor(props){
     super(props)
     this.state = {
@@ -18,7 +19,7 @@ class IndexPage extends React.Component {
   }
 
   loadCategory(){
-    axios.get('/category/findAll')
+    axios.get('/category/findAllCategory')
     .then((result)=>{
       // 将数据设置到局部状态中
       this.setState({
@@ -64,6 +65,5 @@ class IndexPage extends React.Component {
     );
   }
 }
-
 // connect函数可以在this.props中注入一些对象和方法增强组件功能
 export default connect()(IndexPage);

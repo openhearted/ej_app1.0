@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'dva'
 import {withRouter,routerRedux} from 'dva/router'
 import {TabBar} from 'antd-mobile'
-import styles from './App.css'
+import styles from './IndexPage.css'
 
 class App extends React.Component {
   constructor(props){
@@ -87,7 +87,7 @@ class App extends React.Component {
                 />
                 }
                 selected={this.state.selectedTab === 'index'}
-                badge={1}
+                /*badge={1}*/
                 onPress={this.handlerTabChange.bind(this,'index')}
                 data-seed="logId"
               >
@@ -109,7 +109,7 @@ class App extends React.Component {
                 }
                 title="订单"
                 key="order"
-                badge={'new'}
+                /*badge={'new'}*/
                 selected={this.state.selectedTab === 'order'}
                 onPress={this.handlerTabChange.bind(this,'order')}
                 data-seed="logId1"
