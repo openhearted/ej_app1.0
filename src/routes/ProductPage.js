@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'dva';
-import a from '../assets/流泪猫猫头.jpg'
+import a from '../assets/家政.jpg'
 import styles from './IndexPage.css'
 import axios from '../utils/axios'
 

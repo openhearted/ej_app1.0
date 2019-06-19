@@ -22,16 +22,16 @@ class OrderPage extends React.Component {
     const TabExample = () => (
       <div>
         <Tabs tabs={tabs}
-          initialPage={1}
+          initialPage={0}
           onChange={(tab, index) => { console.log('onChange', index, tab); }}
           onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
         >
           <div style={{
-            background: 'url(src/assets/svg/说明.svg) center 200px /  40px 40px no-repeat' ,
+            background: 'url(src/assets/svg/说明.svg) center 145px /  40px 40px no-repeat' ,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            height: '550px' }}>您还没有订单
+            height: '400px' }}>您还没有订单
           </div>
         </Tabs>
         <WhiteSpace />
@@ -42,7 +42,10 @@ class OrderPage extends React.Component {
       <div>
           <div>
             <NavBar
+              leftContent="返回"
               mode="dark"
+              icon={<Icon type="left" />}
+              onLeftClick={() => console.log('onLeftClick')}
               rightContent={[
                 <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
                 <Icon key="1" type="ellipsis" />,
@@ -55,4 +58,4 @@ class OrderPage extends React.Component {
   }
 }
 
-export default OrderPage;
+export default connect()(OrderPage);
