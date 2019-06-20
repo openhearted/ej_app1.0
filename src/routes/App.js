@@ -17,11 +17,7 @@ class App extends React.Component {
   renderContent(pageText) {
     return (
       <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-        <div className={styles.content}>    
-        {
-          this.props.children
-        }    
-        </div>
+        <p>{pageText}</p>        
       </div>
     );
   }
@@ -62,6 +58,12 @@ class App extends React.Component {
   render(){
     return (
       <div className={styles.app}>
+        <div className={styles.content}>
+          {/* 动态路由 */}
+          {
+            this.props.children
+          }
+        </div>
           {/* 导航 */}
         <TabBar
               unselectedTintColor="#949494"
